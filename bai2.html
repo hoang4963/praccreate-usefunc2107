@@ -6,18 +6,24 @@
 </head>
 <body>
 <input type="number" id="r">
-<button onclick="show()">Tinh chu vi</button>
+<button onclick="show()">Tinh C và S</button>
 <p id="result"></p>
+<p id="result2"></p>
 <script>
     function calper(r)
     {
-        return Math.PI*r
+        return Math.PI*r*2
+    }
+    function calarea(r)
+    {
+        return Math.PI*r*r
     }
 
     function show()
     {
         let r = Number(document.getElementById('r').value);
         document.getElementById('result').innerText = calper(r);
+        document.getElementById('result2').innerText = calarea(r);
     }
 </script>
 

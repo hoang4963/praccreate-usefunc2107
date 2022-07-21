@@ -6,24 +6,28 @@
 </head>
 <body>
 <script>
-  let number = Number(prompt(' nhap so '))
-  function checkinteger(num)
-  {
-      let check = true;
-      if (num < 0)
-          check = false;
-      return check;
-  }
-  function show()
-  {
-      if (number==0)
-          alert(' so 0')
-      else if (checkinteger(number)== true)
-          alert('so nguyen duong')
-      else if (checkinteger(number)== false)
-          alert('so am')
-  }
-  show();
+    let num = prompt('Nhập số bất kỳ: ')
+    let arr = num.split("")
+    let check = false
+    function checkNumber(){
+        for(let i = 0; i < arr.length; i++){
+            if(arr[i] === '.'){
+                check = true
+            }
+        }
+        if(check === false){
+            if(arr > 0){
+                check = true
+            }
+        }
+        else
+        {
+            check = false
+        }
+        return check
+    }
+    alert(checkNumber())
+
 </script>
 
 </body>
