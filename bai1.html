@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="number">
+<button onclick="show()">Tính bình phương</button>
+<p id="result"></p>
+<script>
+    function caculatebinhphuong(num)
+    {
+        return num**2
+    }
+    caculatebinhphuong();
+    function show()
+    {
+        let num =  Number(document.getElementById('number').value);
+        document.getElementById('result').innerHTML = caculatebinhphuong(num);
+    }
+
+</script>
+</body>
+</html>

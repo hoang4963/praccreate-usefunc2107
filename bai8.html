@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="number">
+<button onclick="addarr()">Thêm số vào mảng</button>
+<button onclick="revarr()">Đảo Ngược</button>
+<p id="show"></p>
+<br>
+<p id="result"></p>
+<script>
+    let length = Number(prompt('nhap do dai ham'));
+    let array = new Array(length);
+    let i = 0;
+    function addarr()
+    {
+        let num = document.getElementById('number').value;
+        array[i] = num;
+        i++;
+        if ( i > length)
+        {
+            alert('thua so');
+            i--;
+            array.pop();
+        }
+        document.getElementById('number').value = '';
+        document.getElementById('show').innerHTML = array ;
+    }
+
+    function revarr()
+    {
+        let arr1 = new Array();
+        arr1 = array.reverse();
+        document.getElementById('result').innerHTML = arr1
+    }
+
+
+</script>
+
+</body>
+</html>

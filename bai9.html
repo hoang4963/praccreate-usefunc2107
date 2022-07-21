@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="val">
+<button onclick="addnewarr()">Thêm vào mảng</button>
+<button onclick="checkCharInArr()">Check</button>
+<p id="showarr"></p>
+<p id="result"></p>
+<script>
+    let length = Number(prompt(' nhap do dai mang '));
+    let array = new Array(length);
+    let i = 0;
+    function addnewarr()
+    {
+        let val = document.getElementById('val').value;
+        array[i] = val;
+        i++;
+        if ( i > length)
+        {
+            alert('thua so');
+            i--;
+            array.pop();
+        }
+        document.getElementById('showarr').innerHTML = array;
+        document.getElementById('val').value = '';
+    }
+    function checkCharInArr()
+    {
+        let character = prompt(' nhap ky tu muon kiem tra');
+        let count = 0
+        for ( let j = 0 ; j < length; j++)
+        {
+            if (character === array[j])
+                count++;
+        }
+        alert('ky tu ' + character + ' xuat hien ' + count + ' lan trong mang');
+    }
+
+
+</script>
+
+</body>
+</html>

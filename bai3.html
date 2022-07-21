@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="number">
+<button onclick="show()">Tinh giai thừa</button>
+<p id="result"></p>
+<script>
+  function fact(num)
+  {
+      let giaiThua =1;
+      for (let i = 2 ;i <= num; i++)
+      {
+          giaiThua=giaiThua*i ;
+      }
+      return giaiThua;
+  }
+  function show()
+  {
+      let num1= document.getElementById('number').value;
+      document.getElementById('result').innerText = fact(num1);
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="r">
+<button onclick="show()">Tinh chu vi</button>
+<p id="result"></p>
+<script>
+    function calper(r)
+    {
+        return Math.PI*r
+    }
+
+    function show()
+    {
+        let r = Number(document.getElementById('r').value);
+        document.getElementById('result').innerText = calper(r);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a = prompt(' nhap bat ky ');
+  let array = a.split("");
+  let number =['1','2','3','4','5','6','7','8','9','0']
+  function checknumber(num)
+  {
+      let count=0;
+      let check = true;
+      for (let i = 0; i < array.length ; i++)
+      {
+          for (let j = 0; j < number.length; j++)
+              if (array[i] === number[j])
+                  count++
+      }
+      if (count != array.length)
+          check = false;
+      return check
+  }
+  function show()
+  {
+      if(checknumber(a))
+          alert('ban vua nhap 1 so')
+      else alert('khong phai so')
+  }
+  show()
+</script>
+
+</body>
+</html>
